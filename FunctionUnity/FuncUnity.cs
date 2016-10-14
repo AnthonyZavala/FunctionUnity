@@ -9,11 +9,11 @@ using System.Linq.Expressions;
 
 namespace FunctionUnity
 {
-    public class Class1
+    public class FuncUnity
     {
         private readonly UnityContainer _container;
 
-        public Class1()
+        public FuncUnity()
         {
             _container = new UnityContainer();
             Map<Messenger, MessengerA>();
@@ -47,7 +47,6 @@ namespace FunctionUnity
     public abstract class Messenger
     {
         public delegate Task Get(string message);
-        public delegate Task Save(string message);
     }
 
     public class MessengerA

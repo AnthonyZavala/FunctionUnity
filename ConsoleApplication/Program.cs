@@ -11,7 +11,7 @@ namespace ConsoleApplication
     {
         static void Main(string[] args)
         {
-            var x = new Class1();
+            var x = new FuncUnity();
             x.Run().Wait();
 
             Console.ReadKey();
