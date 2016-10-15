@@ -11,10 +11,15 @@ namespace ConsoleApplication
     {
         static void Main(string[] args)
         {
-            var x = new FuncUnity();
-            x.Run().Wait();
+            var x = new FuncUnityB();
 
-            Console.ReadKey();
+            var widgetController = new WidgetController(x.Resolver);
+
+            var one = widgetController.Get(1);
+
+            widgetController.Delete(2);
+            widgetController.Create(new Widget { Id = 5, Name = "five" });
+            var created = widgetController.Get(5);
         }
     }
 }
